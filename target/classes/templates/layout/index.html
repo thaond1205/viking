@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+<head>
+    <meta charset="UTF-8">
+    <title>Viking Shop - Uy Tín, Chất Lượng</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+    <header class="row"></header>
+    <nav class="row">
+        <div th:replace="/layout/_menu.html"></div>
+    </nav>
+    <article class="col-sm-9">
+        <div th:replace="${main}"></div>
+    </article>
+    <aside class="col-sm-3">
+        <div th:replace="/layout/_cart-info.html"></div>
+        <div th:replace="/layout/_category.html"></div>
+    </aside>
+    <footer class="row"></footer>
+</body>
+</html>
