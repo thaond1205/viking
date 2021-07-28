@@ -83,7 +83,7 @@ public class ProductsRestController {
     public ResponseEntity<?> upload(@RequestPart("image") MultipartFile image) throws Exception{
 
         try{
-            File convertFile = new File("D:\\Spring Java 6\\viking\\src\\main\\resources\\static\\testimage\\"+image.getOriginalFilename());
+            File convertFile = new File("C:\\Users\\Admin\\Desktop\\viking\\src\\main\\resources\\static\\testimage"+image.getOriginalFilename());
             convertFile.createNewFile();
             nameImage = image.getOriginalFilename();
             FileOutputStream fout = new FileOutputStream(convertFile);
